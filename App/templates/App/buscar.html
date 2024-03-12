@@ -1,0 +1,20 @@
+{% extends "App/index.html" %}
+
+
+
+{% block titulo %}
+<h3 class="mb-5"><em>Bienvenido!</em></h3>
+<h4 class="mb-5"><em>Busca la nota de tu libro</em></h4>
+{% endblock titulo %}
+
+
+
+
+
+{% block contenido %}
+<form action="{% url 'encontrar_calificacion' %}" method="get">
+    {% csrf_token %}
+    <p>Ingrese la inicial de su libro para tener conocimiento su nota <input type="text" name="buscar" id="buscar"></p>
+    <input type="submit" value="Buscar">
+</form>
+{% endblock contenido %}

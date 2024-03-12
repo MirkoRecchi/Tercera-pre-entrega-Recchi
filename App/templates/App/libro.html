@@ -1,0 +1,34 @@
+{% extends "App/index.html" %}
+
+
+
+{% block titulo %}
+<h3 class="mb-5"><em>Libro</em></h3>
+{% endblock titulo %}
+
+
+
+
+
+{% block contenido %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Cantidad de letras</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for l in libro %}
+        <tr>
+            <td>{{ l.id }}</td>
+            <td>{{ l.nombre }}</td>
+            <td>{{ l.cantidadLetras }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
+    
+    

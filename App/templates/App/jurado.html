@@ -1,0 +1,33 @@
+{% extends "App/index.html" %}
+
+
+
+{% block titulo %}
+<h3 class="mb-5"><em>Jurado</em></h3>
+{% endblock titulo %}
+
+
+
+
+
+{% block contenido %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for j in jurado  %}
+        <tr>
+            <td>{{ j.id }}</td>
+            <td>{{ j.nombre }}</td>
+            <td>{{ j.apellido }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
+    

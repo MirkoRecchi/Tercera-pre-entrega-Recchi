@@ -1,0 +1,36 @@
+{% extends "App/index.html" %}
+
+
+
+{% block titulo %}
+<h3 class="mb-5"><em>Calificaciones</em></h3>
+{% endblock titulo %}
+
+
+
+
+
+{% block contenido %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nota</th>
+            <th>Nombre y apellido del jurado</th>
+            <th>Nombre del libro</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for c in calificacion  %}
+        <tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c.nota }}</td>
+            <td>{{ c.nombreJurado }}</td>
+            <td>{{ c.nombreLibro }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
+
+    
